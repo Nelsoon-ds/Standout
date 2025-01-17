@@ -93,6 +93,7 @@ body {
 }
 .section-3-wrapper {
   display: flex;
+  gap: 16px;
   justify-content: center;
   align-items: center;
 }
@@ -148,7 +149,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   gap: 64px;
-  padding: 0 32px;
 }
 
 .section-6 {
@@ -201,6 +201,18 @@ body {
     color: #ffffff;
 }
 
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
 .social-links {
     display: flex;
     margin-top: 46px;
@@ -209,7 +221,7 @@ body {
 }
 
 .social-links img {
-    width: 40px;
+    width: auto;
     height: 40px;
     transition: opacity 0.3s ease; 
 }
