@@ -144,17 +144,16 @@ body {
 }
 .section-5-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 64px; 
+  gap: 64px;
   padding: 0 32px;
 }
 
 .section-6 {
   background-color: #f8dd9f;
   padding: 100px 0;
-
 }
 
 .section-6-wrapper {
@@ -164,4 +163,46 @@ body {
   margin: 0 auto;
   gap: 64px;
   padding: 0 32px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: white;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.footer {
+    display: flex;
+    padding: 100px 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 46px;
+    gap: 16px;
 }
