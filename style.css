@@ -4,7 +4,7 @@
 *::before {
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 /* Global CSS */
@@ -12,7 +12,11 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f3f4f6;
   padding-top: 70px;
-  height: 100%;
+}
+
+html {
+/*     overflow: hidden;
+ */ 
 }
 
 h1,
@@ -29,6 +33,10 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  min-width: 100vw;
 }
 
 /* Utility Classes */
@@ -68,15 +76,16 @@ img {
 }
 
 /* Ensure each section fills at least the viewport height */
-.section-1,
+ .section-1,
 .section-2,
 .section-3,
 .section-4,
 .section-5,
 .section-6 {
+  padding: 60px 20px;
   min-height: 100vh;
-}
 
+} 
 
 .btn {
   display: flex;
@@ -97,7 +106,6 @@ img {
   margin-top: 20px;
   font-weight: bold;
 }
-
 
 .section-1 {
   height: 100vh;
