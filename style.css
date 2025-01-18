@@ -11,28 +11,25 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f3f4f6;
-  min-height: 100vh;
-  line-height: 1.6;
   padding-top: 70px;
+  height: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "DM Serif Display", serif;
-  font-weight: 400;
 }
 
 p {
   font-family: "Poppins", sans-serif;
-  font-weight: 400; 
-  font-size: 1rem; 
-  line-height: 1.8; 
+  font-size: 1rem;
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
-
 
 /* Utility Classes */
 .header-logo {
@@ -69,32 +66,42 @@ img {
   color: white;
   cursor: pointer;
 }
-.meeting-btn,
-.contact-btn,
-.submit-btn {
-  display: flex;
-  border-radius: 12px;
-  border-style: none;
-  outline-style: none;
-  padding: 16px 24px;
-  text-transform: uppercase;
-  justify-content: center;
-  width: auto;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-weight: 700; 
-  background-color: #000000;
-  color: #ffffff;
+
+/* Ensure each section fills at least the viewport height */
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5,
+.section-6 {
+  min-height: 100vh;
 }
 
-.section-1 .meeting-btn {
-  background-color: rgb(255, 255, 255);
+
+.btn {
+  display: flex;
+  border-radius: 12px;
+  border: none;
+  padding: 16px 36px;
+  text-transform: uppercase;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn.black {
+  background-color: #000;
+  color: #fff;
+}
+.btn.white {
+  background-color: #fff;
   color: #000000;
   margin-top: 20px;
+  font-weight: bold;
 }
+
 
 .section-1 {
   height: 100vh;
+  width: 100%;
   background-image: url("./imgs/topbillede.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,19 +118,20 @@ img {
   align-items: center;
   gap: 50px;
 }
-.section-1-header, .section-1-paragraph {
+.section-1-header,
+.section-1-paragraph {
   padding: 10px 0;
 }
 
 .content {
-max-width: 800px;
+  max-width: 800px;
   margin-left: 10%;
 }
 
 .section-2 {
   background-color: #f8dd9f;
   width: 100%;
-  padding: 100px 20px;
+  padding: 160px 20px;
   text-align: center;
 }
 .section-2-wrapper {
@@ -133,13 +141,10 @@ max-width: 800px;
   align-items: center;
   gap: 32px;
 }
-.section-2 .content {
-  max-width: 1000px;
-}
 
 .section-3 {
   width: 100%;
-  padding: 64px 0;
+  padding: 64px 20px;
   background-color: #ffffff;
 }
 .section-3-wrapper {
@@ -160,7 +165,6 @@ max-width: 800px;
   align-items: flex-start;
 }
 
-
 .section-4-wrapper {
   display: flex;
   align-items: center;
@@ -171,6 +175,7 @@ max-width: 800px;
 .section-4 .center,
 .section-4 .right {
   display: flex;
+
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -207,6 +212,7 @@ max-width: 800px;
 
 .section-6 {
   background-color: #f8dd9f;
+  width: 100%;
   padding: 100px 0;
 }
 
@@ -274,12 +280,9 @@ max-width: 800px;
 }
 
 .social-links img {
-  width: auto;
-  height: 40px;
   transition: opacity 0.3s ease;
 }
 
 .social-links img:hover {
   opacity: 0.8;
 }
-
