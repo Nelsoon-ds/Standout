@@ -361,35 +361,3 @@ img {
     width: 100%;
   }
 }
-
-/* Media Query for larger screens (above 1074px) */
-@media (min-width: 1620px) {
-  /* Navbar Layout */
-  .navbar {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  /* Navbar Links */
-  .nav-links {
-    flex-direction: row;
-    gap: 3.5rem;
-    text-align: center;
-    width: auto;
-  }
-
-  /* Hide menu toggle and icon */
-  .menu-toggle,
-  .menu-icon {
-    display: none;
-  }
-
-  /* Navbar Content */
-  .navbar-content {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-}
-
