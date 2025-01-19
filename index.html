@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>David Olsen Application</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/imgs/profile_pic.ico">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
+    <header class="header">
+            <div  class="navbar">
             <input type="checkbox" class="menu-toggle" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
+            <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">☰</label>
             <div class="navbar-content">
-                <img src="./imgs/rooster-logo.png" class="header-logo" alt="Rooster Fried Chicken Logo">
-            <ul class="nav-links">
+            <img src="./imgs/rooster-logo.png" class="header-logo" alt="Rooster Fried Chicken Logo">
+            <nav class="nav-links">
               <li><a href="/punkt-1">Menupunkt #1</a></li>
               <li><a href="/punkt-2">Menupunkt #2</a></li>
               <li><a href="/punkt-3">Menupunkt #3</a></li>
               <li><a href="/punkt-4">Menupunkt #4</a></li>
               <li><a href="/punkt-5">Menupunkt #5</a></li>
-            </ul>
+            </nav>
             <button class="btn black" aria-label="Book a meeting">Book et møde</button>
         </div>
-        </nav>
+    </div>
     </header>
   
 
@@ -125,12 +126,12 @@
             </div>
         </div>
         </section>
-  
+
         
         <footer class="footer">
-            <div class="footer-column"> 
+            <div class="footer-column">
                 <div class="company-information">
-                    <h2>Find os her</h2> 
+                    <h2>Find os her</h2>
                     <p class="navn">Rooster Fried Chicken</p>
                     <p class="adresse">Firmavej 109</p>
                     <p class="postnr-by">2300 Firmaby</p>
@@ -141,46 +142,48 @@
                         <p>Mandag - Fredag: 10:00 - 17:30</p>
                         <p>Lørdag: 10:00 - 15:00</p>
                     </div>
-                    <div class="social-links"> 
-                        <a href="https://www.facebook.com"><img src="/imgs/facebook-ikon-hvid.png" alt="Facebook"></a> 
-                            <a href="https://www.instagram.com"><img src="/imgs/instagram-ikon-hvid.png" alt="Instagram"></a> 
-                            <a href="https://www.pinterest.com"><img src="/imgs/pinterest-ikon-hvid.png" alt="Pinterest"></a> 
-                            <a href="https://www.linkedin.com/in/davidolsen108/"><img src="/imgs/linkedin-ikon-hvid.png" alt="LinkedIn"></a> </div> 
-                </div>
-                    </div> 
-                        <div class="footer-column"> 
-                        <h2>Information</h2> 
-                        <nav class="footer-nav">
-                        <a href="/om-rooster">Om rooster</a>
-                        <a href="/kataloger-film">Kataloger & film</a>
-                        <a href="/kunde-guide">Kunde guide</a>
-                        <a href="/opskrifter">Opskrifter</a>
-                        <a href="/presse">Presse</a>
-                        <a href="/karriere">Karriere</a>
-                        </nav>
-                    </div> 
-                    <div class="footer-column"> 
-                        <h2>About</h2> 
-                        <nav class="footer-nav">
-                        <a href="/about-us">About Us</a>
-                        <a href="/careers">Careers</a>
-                        <a href="/terms-of-service">Terms of Service</a>
-                        <a href="/refund-policy">Refund Policy</a>
-                        <a href="/help-center">Help Center</a>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com"><img src="/imgs/facebook-ikon-hvid.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com"><img src="/imgs/instagram-ikon-hvid.png" alt="Instagram"></a>
+                        <a href="https://www.pinterest.com"><img src="/imgs/pinterest-ikon-hvid.png" alt="Pinterest"></a>
+                        <a href="https://www.linkedin.com/in/davidolsen108/"><img src="/imgs/linkedin-ikon-hvid.png" alt="LinkedIn"></a>
                     </div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h2>Information</h2>
+                <nav class="footer-nav">
+                    <a href="/om-rooster">Om rooster</a>
+                    <a href="/kataloger-film">Kataloger & film</a>
+                    <a href="/kunde-guide">Kunde guide</a>
+                    <a href="/opskrifter">Opskrifter</a>
+                    <a href="/presse">Presse</a>
+                    <a href="/karriere">Karriere</a>
                 </nav>
-                    <div class="footer-column">
-                         <h2>Shop</h2> 
-                         <nav class="footer-nav">
-                         <a href="/juices">Juices</a>
-                         <a href="/supplements">Supplements</a>
-                         <a href="/pantry">Pantry</a>
-                         <a href="/locations">Locations</a>
-                         <a href="/order-ahead">Order Ahead</a>
-                         <a href="/terms">Terms of Service</a>
-                         <a href="/refund">Refund Policy</a>
-                        </div>
-                    </nav>
-</main>
+            </div>
+            <div class="footer-column">
+                <h2>About</h2>
+                <nav class="footer-nav">
+                    <a href="/about-us">About Us</a>
+                    <a href="/careers">Careers</a>
+                    <a href="/terms-of-service">Terms of Service</a>
+                    <a href="/refund-policy">Refund Policy</a>
+                    <a href="/help-center">Help Center</a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h2>Shop</h2>
+                <nav class="footer-nav">
+                    <a href="/juices">Juices</a>
+                    <a href="/supplements">Supplements</a>
+                    <a href="/pantry">Pantry</a>
+                    <a href="/locations">Locations</a>
+                    <a href="/order-ahead">Order Ahead</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/refund">Refund Policy</a>
+                </nav>
+            </div>
+        </footer>
+        
 </body>
 </html>
