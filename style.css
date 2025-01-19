@@ -378,6 +378,7 @@ img {
 
   .section-3-wrapper {
     grid-template-columns: 1fr; /* Stack items vertically */
+    gap: 0;
   }
 
   .section-4-wrapper {
