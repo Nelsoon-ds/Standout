@@ -15,14 +15,10 @@
   --color-secondary: #f8dd9f;
   --color-white: #ffffff;
   
-  /* Spacing */
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 3.5rem;
-  
   /* Typography */
   --font-heading: "DM Serif Display", serif;
   --font-body: "Poppins", sans-serif;
+
 }
 
 /* Global CSS */
@@ -31,29 +27,33 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   background-color: var(--color-secondary);
+line-height: 1.6;;
 }
 h1,
 h2,
 h3 {
-  font-family: "DM Serif Display", serif;
+  font-family: var(--font-heading);
 }
 
 .navbar {
+  padding: 2% 4%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--color-white);
   position: fixed;
-  width: 100%;
   top: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  top: 0;
+  z-index: 50;
 }
 
 .nav-links {
   display: flex;
-  gap: 3.5rem;
-  flex: 1;
   list-style: none;
   align-items: center;
   justify-content: center;
@@ -81,13 +81,11 @@ h3 {
 .section-6-wrapper,
 .footer {
   padding: 200px 100px;
-  margin: 0 auto;
 }
 
 img {
   display: block;
-  max-width: 100%;
-  min-height: 100px;
+  height: auto;
 }
 
 .btn {
@@ -115,7 +113,7 @@ img {
   background-image: url("./imgs/topbillede.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   color: white;
@@ -233,6 +231,10 @@ img {
   flex-direction: column;
   gap: 2rem;
 }
+
+.contact-form button {
+  flex-grow: 0;
+}
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
@@ -272,34 +274,43 @@ img {
 
 .social-links img {
   transition: opacity 0.3s ease;
+  will-change: opacity;
 }
 
 .social-links img:hover {
   opacity: 0.8;
 }
 
-/* Media Query for smaller screens (up to 1074px) */
+/* Media Query for smaller screens (up to 768px) */
 @media (max-width: 768px) {
+  /* Section Wrappers */
   .section-3-wrapper, .section-5-wrapper {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
-  .section-3-wrapper .left,
+  .section-3-wrapper .left, 
   .section-5-wrapper .left,
-  .section-3-wrapper .right .section-5-wrapper .right {
+  .section-3-wrapper .right, 
+  .section-5-wrapper .right {
     width: 100%;
   }
-  .section-3-wrapper .left img .section-5-wrapper .right img {
+
+  /* Images inside the sections */
+  .section-3-wrapper .left img, 
+  .section-5-wrapper .right img {
     width: 100%;
     height: auto;
   }
+
+  /* Navbar Styling */
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  /* Navbar Links */
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -308,19 +319,7 @@ img {
     width: 100%;
   }
 
-  .nav-links li {
-    font-size: 1.2rem;
-  }
-
-  .nav-links a {
-    padding: 1rem;
-  }
-
-  .btn {
-    margin-top: 1rem;
-  }
-
-  /* Menu Toggle Checkbox */
+  /* Hide the menu toggle checkbox */
   .menu-toggle {
     display: none;
   }
@@ -335,39 +334,41 @@ img {
 
   /* Show the content when checkbox is checked */
   .menu-toggle:checked + .menu-icon + .navbar-content {
-    display: flex; /* Show logo, nav links, and button */
+    display: flex;
   }
 
+  /* Ensure the menu is fully hidden when checkbox is not checked */
+.navbar-content {
+  display: none;
+}
 
+  /* Section 3 Header */
   .section-3-header {
     align-self: center;
   }
-  .section-3-wrapper {
-    grid-template-columns: 1fr; /* Stack items vertically */
-    gap: 0;
-    text-align: center;
-  }
 
+  /* Section 4 Layout */
   .section-4-wrapper {
     flex-direction: column;
     height: 100vh;
   }
 
-  .section-4 .left,
-  .section-4 .center,
+  .section-4 .left, 
+  .section-4 .center, 
   .section-4 .right {
     width: 100%;
   }
-
 }
 
 /* Media Query for larger screens (above 1074px) */
 @media (min-width: 1620px) {
+  /* Navbar Layout */
   .navbar {
     flex-direction: column;
     justify-content: space-between;
   }
 
+  /* Navbar Links */
   .nav-links {
     flex-direction: row;
     gap: 3.5rem;
@@ -375,14 +376,13 @@ img {
     width: auto;
   }
 
-  .menu-toggle {
-    display: none;
-  }
-
+  /* Hide menu toggle and icon */
+  .menu-toggle,
   .menu-icon {
     display: none;
   }
 
+  /* Navbar Content */
   .navbar-content {
     display: flex; 
     justify-content: space-between;
@@ -390,3 +390,4 @@ img {
     width: 100%;
   }
 }
+
