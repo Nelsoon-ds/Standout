@@ -18,11 +18,99 @@
   --font-heading: "DM Serif Display", serif;
   --font-body: "Poppins", sans-serif;
 
-
   /* Weight */
-
   --font-weight: 500;
 }
+
+header {
+  position: fixed;
+  padding: .5rem 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav--ul {
+  margin: 0 auto;
+}
+
+.nav-container, .nav--ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    font-size: 1.2rem;
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-content {
+  max-width: max-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.header-logo {
+  height: 100px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
+.hamburger-menu {
+  display: none; 
+  cursor: pointer;
+}
+
 
 /* Global CSS */
 body,
@@ -31,7 +119,6 @@ html {
 }
 body {
   font-family: var(--font-body);
-  background-color: var(--color-secondary);
   font-weight: var(--font-weight);
 }
 h1,
@@ -39,43 +126,6 @@ h2,
 h3 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight);
-}
-
-.navbar {
-  padding: 2% 4%;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--color-white);
-   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  top: 0;
-z-index: 50;
-}
-
-.nav-links {
-  flex-wrap: wrap;
-  gap: 1rem 3rem;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-.nav-links a {
-  text-decoration: none;
-  color: var(--color-primary);
-}
-.nav-links a:hover {
-  color: var(--color-secondary);
-}
-
-.navbar-content {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  width: 100%;
 }
 
 /* Section styling */
@@ -113,6 +163,25 @@ img {
   color: var(--color-primary);
   font-weight: bold;
 }
+
+.btn.black {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.black:hover {
+  background-color: #333;
+}
+.btn.white:hover {
+  background-color: rgba(255, 255, 255, 0.815);
+}
+
+
 
 .section-1 {
   background-image: url("./imgs/topbillede.jpg");
@@ -165,8 +234,6 @@ img {
   gap: 2rem;
   align-items: center;
 }
-
-
 
 .section-4-wrapper {
   display: flex;
@@ -221,7 +288,6 @@ img {
   gap: 1.5rem;
 }
 
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -243,13 +309,10 @@ img {
   color: var(--color-white);
 }
 
-
 .footer-nav {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .footer-column a {
   color: var(--color-white);
@@ -278,21 +341,62 @@ img {
 
 /* Media Query for smaller screens (up to 1200px) */
 @media (max-width: 1200px) {
-
-
   /* Section Wrappers */
   .section-3-wrapper,
   .section-5-wrapper,
   .section-6-wrapper {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
- 
-
 
   /* Section 4 Layout */
   .section-4-wrapper {
     flex-direction: column;
     height: 100vh;
   }
+}
+
+@media (max-width: 1600px) {
+  .nav-container .logo {
+      font-size: 1.2rem;
+      z-index: 3;
+  }
+
+  .nav {
+      flex-direction: column;
+  }
+
+  .nav--ul, .btn-black{
+      flex-direction: column;
+      background-color: var(--color-white);
+      color: var(--color-primary);
+      padding: 4%;
+     
+  }
+
+  .hamburger-menu {
+      display: block;
+      z-index: 3;
+      position: relative;
+      cursor: pointer;
+  }
+
+  .nav {
+      position: absolute;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 100%;
+      padding-top: 5rem;
+      align-items: center;
+      text-align: center;
+      background-color: var(--color-white);
+      color: var(--color-secondary);
+      transition: 0.3s ease-in-out;
+  }
+
+  .nav.active {
+      right: 0;
+  }
+
 }
