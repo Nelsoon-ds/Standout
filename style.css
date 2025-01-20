@@ -24,7 +24,7 @@
 
 header {
   position: fixed;
-  padding: .5rem 0;
+  padding: 1rem 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -52,8 +52,6 @@ header {
 
 .nav-container, .nav--ul {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 3rem;
     font-size: 1.2rem;
 }
@@ -80,12 +78,13 @@ a {
 }
 
 .header-logo {
-  height: 100px;
+  height: 90px;
   width: auto;
 }
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 4rem;
 }
@@ -154,10 +153,7 @@ img {
   cursor: pointer;
   white-space: nowrap;
 }
-.btn.black {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
+
 .btn.white {
   background-color: var(--color-white);
   color: var(--color-primary);
@@ -356,7 +352,7 @@ img {
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
   .nav-container .logo {
       font-size: 1.2rem;
       z-index: 3;
