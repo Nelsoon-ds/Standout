@@ -44,6 +44,8 @@ header {
 .nav {
   display: flex;
   flex-grow: 1;
+  white-space: nowrap;
+  gap: 1.5rem;
 }
 
 .nav--ul {
@@ -55,8 +57,6 @@ header {
     gap: 3rem;
     font-size: 1.2rem;
 }
-
-
 
 ul {
   list-style: none;
@@ -105,6 +105,10 @@ a {
 .nav-links a:hover {
   color: var(--color-secondary);
 }
+
+.nav .btn-black {
+  margin: 2rem;
+}
 .hamburger-menu {
   display: none; 
   cursor: pointer;
@@ -145,14 +149,15 @@ img {
 .btn {
   display: flex;
   border-radius: 12px;
+  max-width: 300px;
   border: none;
   padding: 16px 36px;
-  min-width: 20px;
   text-transform: uppercase;
   justify-content: center;
   cursor: pointer;
   white-space: nowrap;
 }
+
 
 .btn.white {
   background-color: var(--color-white);
@@ -300,7 +305,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -337,6 +342,10 @@ img {
 
 /* Media Query for smaller screens (up to 1200px) */
 @media (max-width: 1200px) {
+
+  img {
+    width: 100%
+  }
   /* Section Wrappers */
   .section-3-wrapper,
   .section-5-wrapper,
@@ -345,6 +354,14 @@ img {
     flex-direction: column;
   }
 
+  .section-3 .column-2
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
   /* Section 4 Layout */
   .section-4-wrapper {
     flex-direction: column;
@@ -352,7 +369,7 @@ img {
   }
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1600px) {
   .nav-container .logo {
       font-size: 1.2rem;
       z-index: 3;
