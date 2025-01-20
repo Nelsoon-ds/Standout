@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Olsen</title>
     <link rel="stylesheet" href="./style.css" />
-    <link
+<!--     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
+    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
@@ -38,8 +38,10 @@
         <button class="btn black nav" aria-label="Book a meeting">
           Book et møde
         </button>
-        <div class="hamburger-menu">
-          <span class="hamburger-span material-symbols-outlined">menu</span>
+        <div class="hamburger-menu" aria-label="Open Menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
       </div>
     </header>
@@ -86,16 +88,14 @@
           />
         </div>
         <div class="column-2">
-          <h2 class="section-3-header">Modern Refinement</h2>
+          <h1>Modern Refinement</h1>
           <p class="section-3-paragraph">
             Sammen med vores kunder og den samlede viden fra vores 18.500
             arkitekter, ingeniører og øvrige specialister skaber vi løsninger,
             der addreserer urbanisering, griber digitaliseringens muligheder og
             gør vores byer og samfund mere bæredygtige.
           </p>
-          <br />
           <p class="section-3-paragraph-2">Transforming Society Together</p>
-          <br />
           <button class="btn black" aria-label="Contact us">Kontakt os</button>
         </div>
       </div>
@@ -117,7 +117,7 @@
 
     <section class="section-5">
       <div class="section-5-wrapper">
-        <div class="left">
+        <div class="column-1">
           <h2 class="section-5-header">Modern refinement</h2>
           <p class="section-5-paragraph">
             Sammen med vores kunder og den samlede viden fra vores 18.500
@@ -125,12 +125,11 @@
             der addreserer urbanisering, griber digitaliseringens muligheder og
             gør vores byer og samfund mere bæredygtige.
           </p>
-          <br />
           <p class="section-5-paragraph-2">Transforming Society Together</p>
-          <br />
           <button class="btn black" aria-label="Contact us">Kontakt os</button>
         </div>
-        <div class="right">
+        <div class="column-2">
+          <br>
           <img
             src="/imgs/splitsektion-2.jpg"
             class="section-5-img"
@@ -153,6 +152,7 @@
           <p>If you have any questions, please contact us through this form.</p>
           <br />
           <p>Please complete the following fields.</p>
+          <br>
         </div>
         <form class="contact-form" action="/submit-form" method="post">
           <input
