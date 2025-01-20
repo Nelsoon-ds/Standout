@@ -12,6 +12,9 @@
 <body>
     <header class="header">
             <div  class="navbar">
+                <label class="hamburger-menu">
+                    <input type="checkbox">
+                </label>
             <div class="navbar-content">
             <img src="./imgs/rooster-logo.png" class="header-logo" alt="Rooster Fried Chicken Logo">
             <nav class="nav-links">
@@ -105,24 +108,26 @@
     
     <section class="section-6">
         <div class="section-6-wrapper">
-            <div class="left">
-                <h2 class="section-6-header">
+            <div class="section-6-content">
+                <h1>
                     Get in touch
-                </h2>
-                <h4 class="section-6-h3">We are awwwards and we are here to serve! How can we help you?</h4>
+                </h1>
+                <p><strong>We are awwwards and we are here to serve! How can we help you?</strong>
+                    </p>
                 <p>If you have any questions, please contact us through this form.
                 </p>
+                <br>
                 <p>Please complete the following fields.</p>
             </div>
-            <div class="right">
                 <form class="contact-form" action="/submit-form" method="post">
                     <input type="text" id="name" name="name" required placeholder="Dit navn*">
                     <input type="tel" id="phone" name="phone" placeholder="Telefonnummer*">
                     <input type="email" id="email" name="email" required placeholder="Din email*">
                     <textarea id="message" name="message" placeholder="Eventuelt besked"></textarea>
-                    <button type="submit" class="btn black" aria-label="Contact us">Kontakt os</button>
+                    <span class="form-button">
+                        <button type="submit" class="btn black" aria-label="Contact us">Kontakt os</button>
+                    </span>
                   </form>
-            </div>
         </div>
         </section>
 

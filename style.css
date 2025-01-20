@@ -17,6 +17,11 @@
   /* Typography */
   --font-heading: "DM Serif Display", serif;
   --font-body: "Poppins", sans-serif;
+
+
+  /* Weight */
+
+  --font-weight: 500;
 }
 
 /* Global CSS */
@@ -27,29 +32,26 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-secondary);
+  font-weight: var(--font-weight);
 }
 h1,
 h2,
 h3 {
   font-family: var(--font-heading);
-  font-weight: 400;
-  font-size: 2.5em;
+  font-weight: var(--font-weight);
 }
 
 .navbar {
   padding: 2% 4%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
   background-color: var(--color-white);
-/*   position: fixed;
- */  top: 0;
+   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
-  width: auto;
   top: 0;
-  z-index: 50;
+z-index: 50;
 }
 
 .nav-links {
@@ -65,13 +67,15 @@ h3 {
   text-decoration: none;
   color: var(--color-primary);
 }
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
 
 .navbar-content {
   display: flex;
   align-items: center;
   white-space: nowrap;
   width: 100%;
-  transition: all 0.3s ease-in-out;
 }
 
 /* Section styling */
@@ -223,7 +227,11 @@ img {
   width: 100%;
   padding: 12px;
   border: 1px solid #e5e7eb;
- 
+}
+
+.form-button {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer {
@@ -234,6 +242,7 @@ img {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
 
 .footer-nav {
   display: flex;
