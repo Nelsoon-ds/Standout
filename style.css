@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/* Add CSS properties*/
+/* CSS custom properties*/
 :root {
   /* Colors */
   --color-primary: #000000;
@@ -25,8 +25,10 @@
   --font-weight: 400;
   --font-weight-bold: 700;
 
-  /* Size */
-  --font-size-large: 2.5em;
+  /* Font sizes */
+  --font-size-large: clamp(1.5rem, 5vw, 2.5rem);
+
+ --font-size-small: clamp(1rem, 3vw, 1.5rem);
 }
 
 /* Global CSS */
@@ -45,7 +47,7 @@ h3 {
 }
 
 p {
-  font-family: var(--font-body);
+  font-family: var(--font-body)
 }
 img {
   display: block;
@@ -72,9 +74,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 /* Adds Gap to the hamburger menu items */
-
 .nav {
   display: flex;
   flex-grow: 1;
@@ -99,6 +99,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 .header-content {
   max-width: max-content;
   margin: 0 auto;
@@ -126,11 +127,6 @@ a {
   background-color: var(--color-primary);
   border-radius: 2px;
 }
-img {
-  display: block;
-  height: auto;
-}
-
 /* Global section styling */
 .section-padding {
   padding: 150px 100px;
@@ -182,6 +178,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 
 .section-2 {
   background-color: var(--color-secondary);
@@ -330,28 +327,21 @@ img {
 
 /* Media Query 1200px */
 @media (max-width: 1200px) {
+
   /* Stack wrappers vertically for 1d effect */
   .section-1-wrapper,
   .section-3-wrapper,
+  .seciton-4-wrapper,
   .section-5-wrapper,
   .section-6-wrapper {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
   }
-
-  .section-3 .column-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   /* Section 4 Layout */
   .section-4-wrapper {
     flex-direction: column;
   }
 }
-
 @media (max-width: 1620px) {
   /* Align Section 1 centrally as it resizes*/
   .section-1 {
@@ -365,6 +355,8 @@ img {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Navbar */
   .nav-container {
     padding: 0 2rem;
   }
@@ -382,13 +374,6 @@ img {
     padding: 4%;
     width: 100%;
   }
-
-  .hamburger-menu {
-    display: flex;
-    z-index: 3;
-    position: relative;
-    cursor: pointer;
-  }
   .nav {
     position: absolute;
     top: 0;
@@ -404,5 +389,12 @@ img {
   }
   .nav.active {
     right: 0;
+  }
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: flex;
+    z-index: 3;
+    position: relative;
+    cursor: pointer;
   }
 }
