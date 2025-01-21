@@ -11,7 +11,7 @@ The project is hosted on [Vercel](https://standout-theta.vercel.app/)
 
 
 # Result
-![Result](.gh/result2.png)
+![Result](.gh/result.png)
 
 
 ### Key Sections:
