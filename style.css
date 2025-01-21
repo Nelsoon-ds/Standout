@@ -87,7 +87,7 @@ header {
   gap: 2rem;
   margin: 0 auto;
 }
-.navbar-ul li:hover {
+.navbar-ul li:hover, .navbar-ul li:focus-within {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }
@@ -374,6 +374,7 @@ a {
     padding: 4%;
     width: 100%;
   }
+
   .nav {
     position: absolute;
     top: 0;
