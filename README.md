@@ -1,18 +1,15 @@
 # Project Overview - Application for Standout Media
 
-This repository contains the HTML and CSS for my application at Standout Media
----
 
 # Project Goal
-The goal of the project is to design a front-page 1:1 according ot the design-brief. 
+This repository contains the HTML and CSS for my application at Standout Media and
+the goal of the project is to design a front-page 1:1 according ot the design-brief. 
 
 # Project host
 The project is hosted on [Vercel](https://standout-theta.vercel.app/)
 
-
 # Result
 ![Result](.gh/end-result.png)
-
 
 ### Key Sections:
 - **Header & Navigation**:  
