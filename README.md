@@ -1,4 +1,4 @@
-# Project Overview - Application for Standout Media
+### Project Overview - Application for Standout Media
 
 
 # Project Goal
