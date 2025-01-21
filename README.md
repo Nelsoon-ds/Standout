@@ -6,11 +6,11 @@ This repository contains the HTML and CSS for my application at Standout Media
 # Project Goal
 The goal of the project is to design a front-page 1:1
 
-![Designoplæg](design_brief\Designoplæg.jpg)
+![Designoplæg](.gh\Designoplæg.jpg)
 
 # Result
 
-![Result] (imgs\result.png)
+![Result] (.gh\result.png)
 
 ### Key Sections:
 - **Header & Navigation**:  
