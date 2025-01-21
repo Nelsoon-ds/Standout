@@ -10,7 +10,7 @@ The goal of the project is to design a front-page 1:1
 
 # Result
 
-![Result] (.gh\result.png)
+![Result](.gh\result.png)
 
 ### Key Sections:
 - **Header & Navigation**:  
