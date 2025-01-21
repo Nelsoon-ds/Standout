@@ -23,7 +23,6 @@
 
   /* Weight */
   --font-weight: 400;
-  --font-weight-bold: 700;
 
   /* Font sizes */
   --font-size-large: clamp(1.5rem, 5vw, 2.5rem);
@@ -50,7 +49,6 @@ p {
   font-family: var(--font-body)
 }
 img {
-  display: block;
   width: 100%;
   height: auto;
 }
@@ -323,79 +321,4 @@ a {
 
 .social-links img:hover {
   opacity: 0.8;
-}
-
-/* Media Query 1200px */
-@media (max-width: 1200px) {
-
-  /* Stack wrappers vertically for 1d effect */
-  .section-1-wrapper,
-  .section-3-wrapper,
-  .seciton-4-wrapper,
-  .section-5-wrapper,
-  .section-6-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  /* Section 4 Layout */
-  .section-4-wrapper {
-    flex-direction: column;
-  }
-}
-@media (max-width: 1620px) {
-  /* Align Section 1 centrally as it resizes*/
-  .section-1 {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .content {
-    margin: 0 auto;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Navbar */
-  .nav-container {
-    padding: 0 2rem;
-  }
-  .btn.black.nav {
-    display: none; /* Hide the book button on mobile */
-  }
-  .nav {
-    flex-direction: column;
-  }
-
-  .navbar-ul {
-    flex-direction: column;
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    padding: 4%;
-    width: 100%;
-  }
-
-  .nav {
-    position: absolute;
-    top: 0;
-    right: -100%;
-    bottom: 0;
-    width: 100%;
-    padding-top: 5rem;
-    align-items: center;
-    text-align: center;
-    background-color: var(--color-white);
-    color: var(--color-secondary);
-    transition: 0.3s ease-in-out;
-  }
-  .nav.active {
-    right: 0;
-  }
-  /* Hamburger Menu */
-  .hamburger-menu {
-    display: flex;
-    z-index: 3;
-    position: relative;
-    cursor: pointer;
-  }
 }
