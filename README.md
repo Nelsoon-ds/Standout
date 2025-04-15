@@ -1,6 +1,3 @@
-# Project Overview - Application for Standout Media
-
-
 # Project Goal
 This repository contains the HTML and CSS for my application at Standout Media and
 the goal of the project is to design a front-page 1:1 according to the design-brief. 
